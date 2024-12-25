@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="96dp"
+        android:layout_height="78dp"
+
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+
+        >
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This is heading"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/descri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="short Description"
+            android:textSize="20dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="30dp"
+        >
+        <TextView
+            android:id="@+id/listnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="Num"
+            />
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
