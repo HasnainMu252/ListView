@@ -86,5 +86,10 @@ class dialog_types : AppCompatActivity() {
             }.create()
 
 
+        thirdDialog.setOnClickListener(){
+            MultiChoose.show()
+        }
+
+
     }
 }

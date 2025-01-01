@@ -1,6 +1,7 @@
 package com.pakistan_quiz
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.ViewGroup
 import android.widget.Button
@@ -30,6 +31,8 @@ class MovieList : AppCompatActivity() {
         title_listView.layoutParams = layoutParams
 
         val movieList = findViewById<RecyclerView>(R.id.recyclerList)
+        val nextDiaglogSCreen = findViewById(R.id.nextScreenDialog) as Button
+
 
 
 
@@ -46,6 +49,9 @@ class MovieList : AppCompatActivity() {
 
 
 
+        nextDiaglogSCreen.setOnClickListener(){
+            startActivity(Intent(this, dialog_types::class.java))
+        }
 
 
 
