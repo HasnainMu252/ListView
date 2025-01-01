@@ -2,7 +2,9 @@ package com.pakistan_quiz
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.view.ViewGroup
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -20,6 +22,12 @@ class MovieList : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_movie_list)
+
+        val title_listView = findViewById<LinearLayout>(R.id.main)
+        val layoutParams = title_listView.layoutParams as ViewGroup.MarginLayoutParams
+        val screenHeight = resources.displayMetrics.heightPixels
+        layoutParams.topMargin = (screenHeight * 0.2).toInt()
+        title_listView.layoutParams = layoutParams
 
         val movieList = findViewById<RecyclerView>(R.id.recyclerList)
 

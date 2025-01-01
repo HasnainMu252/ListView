@@ -3,6 +3,8 @@ package com.pakistan_quiz
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -22,13 +24,13 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val title_listView = findViewById<LinearLayout>(R.id.title_listView)
+        val title_listView = findViewById<LinearLayout>(R.id.main)
         val nextptn  = findViewById<Button>(R.id.nextScreen)
 
 //        this help to automatic detect the heigh of deveice and take some margin from it
         val layoutParams = title_listView.layoutParams as ViewGroup.MarginLayoutParams
         val screenHeight = resources.displayMetrics.heightPixels
-        layoutParams.topMargin = (screenHeight * 0.1).toInt()
+        layoutParams.topMargin = (screenHeight * 0.2).toInt()
         title_listView.layoutParams = layoutParams
 
 // list view Seting
@@ -51,6 +53,22 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.app_bar_menu,menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.setting-> Toast.makeText(this,"The item is clicked",Toast.LENGTH_LONG).show()
+            R.id.addContact-> Toast.makeText(this,"The item is clicked",Toast.LENGTH_LONG).show()
+            R.id.wishlist-> Toast.makeText(this,"The item is clicked",Toast.LENGTH_LONG).show()
+            R.id.notification-> Toast.makeText(this,"The item is clicked",Toast.LENGTH_LONG).show()
+
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
 
